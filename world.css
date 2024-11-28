@@ -1,1 +1,216 @@
-/* Add your own styles */
+/* Body Styling */
+body {
+    font-family: 'Arial', 'Helvetica', sans-serif; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    background-color: #F2F6FF;  
+    margin: 0;
+    padding: 0;
+    color: #333;
+    box-sizing: border-box;
+}
+
+/* Header Styling */
+header {
+    background: #4C6DFF;  
+    color: #fff;
+    width: 100%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+}
+
+header img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin-top: 20px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Main Section */
+main {
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+/* Controls Section Styling */
+#controls {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;  
+    align-items: center;
+    gap: 15px;  
+}
+
+label {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #333;
+}
+
+input[type="search"] {
+    width: 70%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="search"]:focus {
+    border-color: #FF8C42;  /* Coral accent */
+    box-shadow: 0 4px 10px rgba(255, 140, 66, 0.4);
+}
+
+/* Buttons */
+button {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    border: none;
+    font-weight: 600;
+}
+
+#lookup {
+    background-color: #FF8C42; 
+    color: #fff;
+}
+
+#lookup:hover {
+    background-color: #FF7A2D;
+    transform: translateY(-3px);
+}
+
+#lookupCities {
+    background-color: #43C1A2; 
+    color: #fff;
+}
+
+#lookupCities:hover {
+    background-color: #38A693;
+    transform: translateY(-3px);
+}
+
+/* Result Section */
+#result {
+    margin-top: 30px;
+}
+
+.result-item {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 1rem;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table th,
+table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #4C6DFF;  
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+table td {
+    background-color: #f9f9f9;
+    color: #333;
+    font-weight: 500;
+}
+
+tr:nth-child(even) {
+    background-color: #f4f4f4;
+}
+
+tr:hover {
+    background-color: #e2e8f0;
+    cursor: pointer;
+}
+
+/* Responsive Design for mobile */
+@media (max-width: 768px) {
+    #controls {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    input[type="search"] {
+        width: 90%;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    button {
+        padding: 12px 25px;
+    }
+
+    header h1 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    input[type="search"] {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+    }
+}
